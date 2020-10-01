@@ -2,8 +2,8 @@
   <head>
   <script async src="//acdn.adnxs.com/prebid/not-for-prod/prebid.js"></script>
   <script>
-    var PREBID_TIMEOUT = 1000;
-    var FAILSAFE_TIMEOUT = 3000;
+    var PREBID_TIMEOUT = 3000;
+    var FAILSAFE_TIMEOUT = 5000;
 
     var adUnits = [{
 	  code: 'div_1',
@@ -99,19 +99,19 @@
 function adrads(adUnits, adDivIds)
 {
   pbjs.que.push(function() {
-      pbjs.setBidderConfig({
-        bidders: ['adrelevantis'],
-        config: {
-          fpd: {
-            context: {
-              keywords: ['US Open'],
-              data: {
-                category: '/sports/golf'
-              }
+    pbjs.setBidderConfig({
+      bidders: ['adrelevantis'],
+      config: {
+        fpd: {
+          context: {
+            keywords: ['US Open'],
+            data: {
+              category: '/sports/golf'
             }
           }
-       }
-      });
+        }
+     }
+    });
     pbjs.addAdUnits(adUnits);
     pbjs.requestBids({
       bidsBackHandler: initAdserver,
