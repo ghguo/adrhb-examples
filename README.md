@@ -139,7 +139,7 @@ Put the above code in the page ```<head>``` section. And make sure your page has
 ```
 
 # Examples
-Here are a few content types (IAB Categories) in the examples.
+Here are a few content types (IAB Categories) in the /ContentExamples.
 
 Cook: essential-french-onion-soup.html
 
