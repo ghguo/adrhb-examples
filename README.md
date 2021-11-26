@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function(event){ adrtags("D435C107
 </script>
 ```
 
-Put the above code in the page <head> section. And make sure your page has the div tags mentioned in the code. For example,
+Put the above code in the page ```<head>``` section. And make sure your page has the div tags mentioned in the code. For example,
 <div id='div-4>
 </div>
 <div id='div-3'>
