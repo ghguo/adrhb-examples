@@ -1,19 +1,135 @@
-# Content-Driven Header Bidding
-**Content-Driven Header Bidding** based on Prebid.js displays header bidding ads relevant to page content.
+# Ads relevant to content with Header Bidding
+Adrelevantis bidder adapater (https://docs.prebid.org/dev-docs/bidders/adrelevantis.html) is the first adapter in prebid.js that sends content's IAB categories and content's ranked keywords from publisher side. 
 
-The Content-Driven Header Bidding takes IAB Categories and keywords extracted from page content and display ads that match the IAB Categories and keywords.
+It starts with page content. Here, a few examples with various content types (Sports, Home and Garden, Entertainment and Recipe, etc) are given to demonstrate how to show ads relevant to page content.
 
-You can find more about Prebid.js at http://prebid.org/
+Regardless of content types, the same code is used to retrieve the relevant ads. 
 
-You can find more about IAB Categoies at https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy/
+# Code
 
+<script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script async src="//www.adrelevantis.com/js/dev/prebid.js"></script>
+<script src="//www.adrelevantis.com/js/contentdriventag.js"></script>
+<script>
+var adUnits = [
+	{
+	  code: 'div-4',
+	  sizes: [
+		[250, 250]
+	  ],
+	  mediaTypes: {
+		native: {
+		  title: {
+			required: true
+		  },
+		  image: {
+			required: true
+		  },
+		  sponsoredBy: {
+			required: true
+		  }
+		}
+	  },
+	  bids: [{
+		bidder: 'adrelevantis',
+		params: {
+		  placementId: 13232354,
+		  allowSmallerSizes: true
+		}
+	  }]
+	},
+	{
+	  code: 'div-3',
+	  sizes: [
+		[250, 250]
+	  ],
+	  mediaTypes: {
+		native: {
+		  title: {
+			required: true
+		  },
+		  image: {
+			required: true
+		  },
+		  sponsoredBy: {
+			required: true
+		  }
+		}
+	  },
+	  bids: [{
+		bidder: 'adrelevantis',
+		params: {
+		  placementId: 13232354,
+		  allowSmallerSizes: true
+		}
+	  }]
+	},
+	{
+	  code: 'div-2',
+	  sizes: [
+		[250, 250]
+	  ],
+	  mediaTypes: {
+		native: {
+		  title: {
+			required: true
+		  },
+		  image: {
+			required: true
+		  },
+		  sponsoredBy: {
+			required: true
+		  }
+		}
+	  },
+	  bids: [{
+		bidder: 'adrelevantis',
+		params: {
+		  placementId: 13232354,
+		  allowSmallerSizes: true
+		}
+	  }]
+	},
+	{
+		code: '/21901351985/header-bid-tag-0',
+		mediaTypes: {
+			banner: {
+				sizes: [[300, 250], [300, 600]]
+			}
+		},
+		bids: [{
+			bidder: 'adrelevantis',
+			params: {
+				placementId: 13144370,
+				cpm: 0.50
+			}
+		}]
+	}
+];
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+	googletag.pubads().disableInitialLoad();
+});
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+
+var adDivIds = ['div-4','div-3','div-2','/21901351985/header-bid-tag-0'];
+document.addEventListener("DOMContentLoaded", function(event){ adrtags("D435C107A8844E15BAA5D4A9B7D94FC5", adUnits, adDivIds); });
+</script>
+
+Put the above code in the page <head> section. And make sure your page has the div tags mentioned in the code. For example,
+<div id='div-4>
+</div>
+<div id='div-3'>
+</div>
+<div id='div-2'>
+</div>
 
 # Examples
+Here are a few content types (IAB Categories) in the examples.
 
-hello_world.html displays defalut ads from header bidding of adrelevantisBidderAdapter.
-
-basic-example.html displays ads without using page content.
-
-contentdriven-example.html displays using page meta description.
-
-Sports/big-ten-reporters-pick-michigan-to-win-league-title-in-2019adrhb.html displays ads using page content. 
+Cook - essential-french-onion-soup.html
+Entertainment - laura-marano-new-single-let-me-cry.html
+Home and Garden - the-impracticality-of-hardwood-flooring.html
+Sports - big-ten-reporters-pick-michigan-to-win-league-title-in-2019.html
