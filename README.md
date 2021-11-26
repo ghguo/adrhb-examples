@@ -1,5 +1,5 @@
 # Ads relevant to content with Adrelevantis bidder adapter
-Adrelevantis bidder adapater (https://docs.prebid.org/dev-docs/bidders/adrelevantis.html) is the first adapter in prebid.js that sends content's IAB categories and content's ranked keywords from publisher side. 
+[Adrelevantis bidder adapater] (https://docs.prebid.org/dev-docs/bidders/adrelevantis.html) is the first adapter in prebid.js that sends content's IAB categories and content's ranked keywords from publisher side. 
 
 Here, a few examples with various content types (Sports, Home and Garden, Entertainment and Cooking, etc) are given to demonstrate how to show ads relevant to page content using Adrelevantis bidder adapter. The following code extracts IAB Categories and ranked keywords of a page, sends the categories and keywords as part of bid request and displays ads.
 
