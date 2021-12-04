@@ -137,7 +137,17 @@ Put the above code in the page ```<head>``` section. And make sure your page has
 <div id='div-2'>
 </div>
 ```
+...
 
+```
+<div id='/21901351985/header-bid-tag-0'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+			googletag.display('/21901351985/header-bid-tag-0');
+		});
+	</script>
+</div>
+```
 # Examples
 Here are a few content types (IAB Categories) in the /ContentExamples.
 
