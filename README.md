@@ -3,7 +3,7 @@
 
 Here, a few examples with various content types (Sports, Home and Garden, Entertainment and Cooking, etc) are given to demonstrate how to show ads relevant to page content using Adrelevantis bidder adapter. The following code extracts IAB Categories and ranked keywords of a page, sends the categories and keywords as part of bid request and displays ads.
 
-Regardless of content types, the same code is used to retrieve the relevant ads. 
+Drop the following code to your page to display ads relevant to the page content.
 
 # Code
 
