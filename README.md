@@ -157,4 +157,6 @@ Entertainment: laura-marano-new-single-let-me-cry.html
 
 Home and Garden: the-impracticality-of-hardwood-flooring.html
 
+Pets: anaplasmosis-in-dogs.html
+
 Sports: big-ten-reporters-pick-michigan-to-win-league-title-in-2019.html
