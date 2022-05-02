@@ -9,8 +9,8 @@ Drop the following code to your page to display ads relevant to the page content
 
 ```
 <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
-<script async src="//www.adrelevantis.com/js/dev/prebid.js"></script>
-<script src="//www.adrelevantis.com/js/contentdriventag.js"></script>
+<script async src="//www.adrelevantis.com/pub/prebid.js"></script>
+<script src="//www.adrelevantis.com/pub/contentdriventag.js"></script>
 <script>
 var adUnits = [
 	{
